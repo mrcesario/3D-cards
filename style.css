@@ -1,0 +1,511 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "petit";
+  src: url(Petit.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mistral";
+  src: url(Mistral.TTF);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bulleto";
+  src: url(Bulletto.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "modes";
+  src: url(Modes.TTF);
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  background: #000040;
+}
+
+.group {
+  display: flex;
+  align-items: space-around;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.candle {
+  min-height: 30vh;
+  max-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---------------------------PINK---------------------------*/
+.container-pink {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-pink {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  height: 85vh;
+  width: 80%;
+  border-radius: 30px;
+  padding: 2rem 5rem;
+  background: linear-gradient(to top, #ff009d, #ffc000);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card-pink .candle img {
+  padding-bottom: 100px;
+  width: 250px;
+  filter: drop-shadow(5px 10px 10px #ff009d);
+  transition: all 0.75s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.card-pink .info h1 {
+  text-align: center;
+  font-size: 8rem;
+  transform: rotate(5deg);
+  font-family: mistral;
+  transition: all 0.75s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+.card-pink .info:nth-child(1) h1 {
+  color: #ff4d9a;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+.pink .info:nth-child(1) h1 {
+  color: #ff1177;
+  animation: none;
+}
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #ff4d9a, 0 0 10px #ff4d9a, 0 0 10px #ff4d9a,
+      0 0 20px #ff1177, 0 0 30px #ff1177, 0 0 20px #ff1177, 0 0 5px #ff1177,
+      0 0 30px #ff1177;
+  }
+  to {
+    text-shadow: 0 0 5px #ff4d9a, 0 0 5px #ff4d9a, 0 0 5px #ff4d9a,
+      0 0 5px #ff1177, 0 0 15px #ff1177, 0 0 10px #ff1177, 0 0 20px #ff1177,
+      0 0 20px #ff1177;
+  }
+}
+
+.card-pink .btn {
+  display: flex;
+  padding-right: 100px;
+  position: relative;
+  z-index: 3;
+  transition: all 0.75s ease-out;
+}
+
+.card-pink .cta {
+  display: flex;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: white;
+  background: #ff1177;
+  transition: 1s;
+  transform: skewX(-15deg);
+  filter: drop-shadow(5px 5px 10px #ff0094);
+}
+
+.card-pink .cta:focus {
+  outline: none;
+}
+
+.card-pink .cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #f3be05;
+  filter: drop-shadow(5px 5px 10px #f3be05);
+}
+
+.card-pink .cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.card-pink .cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.card-pink .btn span {
+  transform: skewX(15deg);
+}
+
+.card-pink .btn span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.card-pink path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.card-pink path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.card-pink .cta:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.card-pink .cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.card-pink .cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #f3be05;
+  }
+  100% {
+    fill: white;
+  }
+}
+
+/*---------------------------YELLOW---------------------------*/
+.container-yellow {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-yellow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  height: 85vh;
+  width: 80%;
+  border-radius: 30px;
+  padding: 2rem 5rem;
+  background: linear-gradient(to top, #ffc000, #08ff00);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card-yellow .candle img {
+  padding-bottom: 100px;
+  width: 250px;
+  filter: drop-shadow(5px 10px 10px #ffc000);
+  transition: all 0.75s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.card-yellow .info h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 6rem;
+  font-family: bulleto;
+  transition: all 0.75s ease-out;
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+}
+
+.card-yellow .info:nth-child(1) h1 {
+  color: #ffc000;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.yellow .info:nth-child(1) h1 {
+  color: #ffc000;
+  animation: none;
+}
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #ffd760, 0 0 10px #ffd760, 0 0 10px #ffd760,
+      0 0 20px #ffc000, 0 0 30px #ffc000, 0 0 20px #ffc000, 0 0 5px #ffc000,
+      0 0 30px #ffc000;
+  }
+  to {
+    text-shadow: 0 0 5px #ffd760, 0 0 5px #ffd760, 0 0 5px #ffd760,
+      0 0 5px #ffc000, 0 0 15px #ffc000, 0 0 10px #ffc000, 0 0 20px #ffc000,
+      0 0 20px #ffc000;
+  }
+}
+
+.card-yellow .btn {
+  display: flex;
+  padding-right: 100px;
+  position: relative;
+  z-index: 3;
+}
+
+.card-yellow .cta {
+  display: flex;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: white;
+  background: #ffc000;
+  transition: 1s;
+  transform: skewX(-15deg);
+  filter: drop-shadow(5px 5px 10px #ffd760);
+}
+
+.card-yellow .cta:focus {
+  outline: none;
+}
+
+.card-yellow .cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #08ff00;
+  filter: drop-shadow(5px 5px 10px #08ff00);
+}
+
+.card-yellow .cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.card-yellow .cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.card-yellow .btn span {
+  transform: skewX(15deg);
+}
+
+.card-yellow .btn span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.card-yellow path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.card-yellow path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.card-yellow .cta:hover path.three {
+  animation: color_anim1 1s infinite 0.2s;
+}
+
+.card-yellow .cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim1 1s infinite 0.6s;
+}
+
+.card-yellow .cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim1 1s infinite 0.4s;
+}
+
+@keyframes color_anim1 {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #08ff00;
+  }
+  100% {
+    fill: white;
+  }
+}
+
+/*---------------------------GREEN---------------------------*/
+.container-green {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-green {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform-style: preserve-3d;
+  min-height: 80vh;
+  height: 85vh;
+  width: 80%;
+  border-radius: 30px;
+  padding: 2rem 5rem;
+  background: linear-gradient(to top, #08ff00, #ff009d);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card-green .candle img {
+  padding-bottom: 100px;
+  width: 250px;
+  filter: drop-shadow(5px 10px 10px #08ff00);
+  transition: all 0.75s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.card-green .info h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 6rem;
+  font-family: modes;
+  transform: rotate(-5deg);
+  transition: all 0.75s ease-out;
+  position: relative;
+  z-index: 2;
+}
+
+.card-green .info:nth-child(1) h1 {
+  color: #08ff00;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+.green .info:nth-child(1) h1 {
+  color: #08ff00;
+  animation: none;
+}
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #85ff81, 0 0 10px #85ff81, 0 0 10px #85ff81,
+      0 0 20px #08ff00, 0 0 30px #08ff00, 0 0 20px #08ff00, 0 0 5px #08ff00,
+      0 0 30px #08ff00;
+  }
+  to {
+    text-shadow: 0 0 5px #85ff81, 0 0 5px #85ff81, 0 0 5px #85ff81,
+      0 0 5px #08ff00, 0 0 15px #08ff00, 0 0 10px #08ff00, 0 0 20px #08ff00,
+      0 0 20px #08ff00;
+  }
+}
+
+.card-green .btn {
+  display: flex;
+  padding-right: 100px;
+  position: relative;
+  z-index: 3;
+}
+
+.card-green .cta {
+  display: flex;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: white;
+  background: #08ff00;
+  transition: 1s;
+  transform: skewX(-15deg);
+  filter: drop-shadow(5px 5px 10px #85ff81);
+}
+
+.card-green .cta:focus {
+  outline: none;
+}
+
+.card-green .cta:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #ff009d;
+  filter: drop-shadow(5px 5px 10px #ff009d);
+}
+
+.card-green .cta span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.card-green .cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+.card-green .btn span {
+  transform: skewX(15deg);
+}
+
+.card-green .btn span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+.card-green path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.card-green path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.card-green .cta:hover path.three {
+  animation: color_anim2 1s infinite 0.2s;
+}
+
+.card-green .cta:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim2 1s infinite 0.6s;
+}
+
+.card-green .cta:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim2 1s infinite 0.4s;
+}
+
+@keyframes color_anim2 {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #ff009d;
+  }
+  100% {
+    fill: white;
+  }
+}
